@@ -35,7 +35,7 @@ sentiment.analyze("I love you, but you smell something aweful")
 
 The goal of this project is not to be the next final solution for natural language processing. There are plenty of 
 [other projects](http://www.nltk.org/) that do a significantly better job of this. SpeakEasy spawned out of another
-of my projects, [Nodebot](www.github.com/nhunzaker/nodebot), as a method of processing user input to simulate the illusion
+of my projects, [Nodebot](http://www.github.com/nhunzaker/nodebot), as a method of processing user input to simulate the illusion
 of intelligence.
 
 SpeakEasy's goal is to provide a library for NodeJS to perform simple language processing actions that perform well for 
