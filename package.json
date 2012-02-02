@@ -1,5 +1,5 @@
 {
-  "name"          : "speakeasy",
+  "name"          : "speakeasy-nlp",
   "description"   : "A simple natural language processor for node javascript.",
   "homepage"      : "www.github.com/natehunzaker/speakeasy",
   "keywords"      : ["natural language"],
