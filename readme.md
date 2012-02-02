@@ -2,6 +2,9 @@
 ## Simple Natural Language Processing
 
 ---
+`npm install speakeasy-nlp`
+
+---
 
 ###Current commands:
 
@@ -12,7 +15,7 @@
 
 ``` javascript
 
-var speak = require("./speakeasy");
+var speak = require("./speakeasy-nlp");
 
 // Analyze sentences at a basic level
 // ------------------------------------- //
