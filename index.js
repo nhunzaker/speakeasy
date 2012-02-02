@@ -1,4 +1,4 @@
-// Tagger.js
+// Speakeasy.js
 //
 // Breaks up speech into components and assists with
 // classifying things such as the subject, ownership,
@@ -9,7 +9,7 @@
 // to work.
 //
 // Please help me make this better:
-// https://github.com/nhunzaker/nodebot
+// https://github.com/nhunzaker/speakeasy
 // -------------------------------------------------- //
 
 var lev = require("levenshtein")
