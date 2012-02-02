@@ -1,6 +1,5 @@
-var _ = require("underscore"),
+var _  = require("underscore"),
     fs = require('fs');
-
 
 // Calculates the negative sentiment of a sentence
 // -------------------------------------------------- //
@@ -39,7 +38,7 @@ function positivity (phrase) {
 // Calculates overall sentiment
 // -------------------------------------------------- //
 
-function sentiment (phrase) {
+function analyze (phrase) {
 
     var pos = positivity(phrase),
         neg = negativity(phrase);
@@ -62,7 +61,7 @@ function sentiment (phrase) {
 
 
 module.exports = {
-    sentiment  : sentiment,
+    analyze    : analyze,
     negativity : negativity,
     positivity : positivity
 };
