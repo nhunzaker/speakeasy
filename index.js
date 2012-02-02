@@ -12,14 +12,15 @@
 // https://github.com/nhunzaker/speakeasy
 // -------------------------------------------------- //
 
-var lev = require("levenshtein")
-,   pos = require('./pos-js')
-,   lexer  = new pos.Lexer()
-,   tagger = new pos.Tagger()
-,   fileEx = /\S+\.\S+[^\/\?]/ig
-,   dirEx  = /((\.|)\/(.+|))+$/ig
+var lev    = require("levenshtein"),
+    pos    = require('./pos-js'),
+    lexer  = new pos.Lexer(),
+    tagger = new pos.Tagger(),
+    fileEx = /\S+\.\S+[^\/\?]/ig,
+    dirEx  = /((\.|)\/(.+|))+$/ig
 ;
 
+module.exports.sentiment = require("./sentiment");
 
 // Finds the closest match between a statement
 // and a body of words

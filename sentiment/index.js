@@ -7,11 +7,12 @@ var _ = require("underscore"),
 
 function negativity (phrase) {
 
-    var neg  = fs.readFileSync("./negative-words.txt", "UTF-8").split("\n"),
-        hits = _.intersection(neg, phrase.toLowerCase().split(" "));
+    var tokens = phrase.toLowerCase().split(" "),
+        neg  = fs.readFileSync(__dirname + "/negative-words.txt", "UTF-8").split("\n"),
+        hits = _.intersection(neg, tokens);
     
     return { 
-        score : hits.length,
+        score : hits.length / tokens.length,
         words : hits
     };
 
@@ -23,11 +24,12 @@ function negativity (phrase) {
 
 function positivity (phrase) {
 
-    var pos  = fs.readFileSync("./positive-words.txt", "UTF-8").split("\n"),
-        hits = _.intersection(pos, phrase.toLowerCase().split(" "));
+    var tokens = phrase.toLowerCase().split(" "),
+        pos  = fs.readFileSync(__dirname + "/positive-words.txt", "UTF-8").split("\n"),
+        hits = _.intersection(pos, tokens);
     
     return { 
-        score : hits.length,
+        score : hits.length / tokens.length,      
         words : hits
     };
 
@@ -38,14 +40,29 @@ function positivity (phrase) {
 // -------------------------------------------------- //
 
 function sentiment (phrase) {
-    return positivity(phrase).score - negativity(phrase).score;
+
+    var pos = positivity(phrase),
+        neg = negativity(phrase);
+
+    return {
+
+        score     : pos.score - neg.score,
+
+        positive  : {
+            score : pos.score,
+            words : pos.words
+        },
+
+        negative  : {
+            score : neg.score,
+            words : neg.words
+        }
+    };
 }
 
 
-// Tests
-// -------------------------------------------------- //
-
-var statement = process.argv.slice(2).join(" ");
-var a = sentiment(statement);
-
-console.log("Score:", a);
+module.exports = {
+    sentiment  : sentiment,
+    negativity : negativity,
+    positivity : positivity
+};
