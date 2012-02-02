@@ -15,7 +15,7 @@
 
 ``` javascript
 
-var speak = require("./speakeasy");
+var speak = require("./speakeasy-nlp");
 
 // Analyze sentences at a basic level
 // ------------------------------------- //
