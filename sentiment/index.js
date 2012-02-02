@@ -5,10 +5,12 @@ var _  = require("underscore"),
 // -------------------------------------------------- //
 
 function negativity (phrase) {
+    
+    // Cache it
+    this.neg = this.neg || fs.readFileSync(__dirname + "/negative-words.txt", "UTF-8").split("\n");
 
     var tokens = phrase.toLowerCase().split(" "),
-        neg  = fs.readFileSync(__dirname + "/negative-words.txt", "UTF-8").split("\n"),
-        hits = _.intersection(neg, tokens);
+        hits = _.intersection(this.neg, tokens);
     
     return { 
         score : hits.length / tokens.length,
@@ -23,9 +25,11 @@ function negativity (phrase) {
 
 function positivity (phrase) {
 
+    // Cache it
+    this.pos = this.pos || fs.readFileSync(__dirname + "/positive-words.txt", "UTF-8").split("\n");
+
     var tokens = phrase.toLowerCase().split(" "),
-        pos  = fs.readFileSync(__dirname + "/positive-words.txt", "UTF-8").split("\n"),
-        hits = _.intersection(pos, tokens);
+        hits = _.intersection(this.pos, tokens);
     
     return { 
         score : hits.length / tokens.length,      
