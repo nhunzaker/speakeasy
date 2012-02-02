@@ -1,6 +1,7 @@
 # SpeakEasy
 ## Simple Natural Language Processing
 
+---
 `npm install speakeasy-nlp`
 
 ---
