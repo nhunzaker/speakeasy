@@ -22,8 +22,10 @@ function negativity (phrase) {
         words  = [];
 
     tokens.forEach(function(t) {
-        if (neg.indexOf(t) > -1) hits++;
-        words.push(t);
+        if (neg.indexOf(t) > -1) {
+            hits++;
+            words.push(t);
+        }
     });
 
     return { 
@@ -45,8 +47,10 @@ function positivity (phrase) {
         words  = [];
 
     tokens.forEach(function(t) {
-        if (pos.indexOf(t) > -1) hits++;
-        words.push(t)
+        if (pos.indexOf(t) > -1) {
+            hits++;
+            words.push(t);
+        }
     });
 
     return { 

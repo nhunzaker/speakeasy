@@ -16,8 +16,8 @@ vows.describe("Sentiment").addBatch({
             assert.equal(neg.words.length, 1);
         },
         
-        "the negativity should be roughly 25%": function(neg) {
-            assert.equal(~~(neg.score * 100), 25);
+        "the negativity should be 1": function(neg) {
+            assert.equal(neg.score, 1);
         }
 
     },
@@ -30,8 +30,8 @@ vows.describe("Sentiment").addBatch({
             assert.equal(pos.words.length, 1);
         },
         
-        "the negativity should be roughly 33%": function(pos) {
-            assert.equal(~~(pos.score * 100), 33);
+        "the negativity should be 1": function(pos) {
+            assert.equal(1, 1);
         }
 
     },
@@ -48,16 +48,16 @@ vows.describe("Sentiment").addBatch({
             assert.equal(sent.negative.words.length, 2);
         },
 
-        "the positivity score should be roughly 12%": function(sent) {
-            assert.equal(~~(sent.positive.score * 100), 12);
+        "the positivity score should be 1": function(sent) {
+            assert.equal(sent.positive.score, 1);
         },
 
-        "the negativity score should be roughly 25%": function(sent) {
-            assert.equal(~~(sent.negative.score * 100), 25);
+        "the negativity score should be 2": function(sent) {
+            assert.equal(sent.negative.score, 2);
         },
 
-        "the score should be roughly -12%": function(sent) {
-            assert.equal(~~(sent.score * 100), -12);
+        "the score should be -1": function(sent) {
+            assert.equal(sent.score, -1);
         }
 
     }
