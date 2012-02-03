@@ -32,7 +32,6 @@ sentiment.analyze("I love you, but you smell something aweful")
 // (Negative scores dictate a stronger influence of negative words)
 //=> { score: -1, positive: { ... }, negative: { ... } }
 
-
 // Closest word
 // ------------------------------------- //
 speak.closest("foo", ["foo", "bar", "baz"])     //=> "foo"
