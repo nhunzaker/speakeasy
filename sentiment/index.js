@@ -1,20 +1,34 @@
 var _  = require("underscore"),
     fs = require('fs');
 
+// -------------------------------------------------- //
+// -------------------------------------------------- //
+
+var neg = require("./negative-words.js"),
+    pos = require("./positive-words.js");
+
+// -------------------------------------------------- //
+// -------------------------------------------------- //
+
+
 // Calculates the negative sentiment of a sentence
 // -------------------------------------------------- //
 
 function negativity (phrase) {
     
     // Cache it
-    this.neg = this.neg || fs.readFileSync(__dirname + "/negative-words.txt", "UTF-8").split("\n");
-
     var tokens = phrase.toLowerCase().split(" "),
-        hits = _.intersection(this.neg, tokens);
-    
+        hits   = 0,
+        words  = [];
+
+    tokens.forEach(function(t) {
+        if (neg.indexOf(t) > -1) hits++;
+        words.push(t);
+    });
+
     return { 
-        score : hits.length / tokens.length,
-        words : hits
+        score : hits,
+        words : words
     };
 
 };
@@ -26,14 +40,18 @@ function negativity (phrase) {
 function positivity (phrase) {
 
     // Cache it
-    this.pos = this.pos || fs.readFileSync(__dirname + "/positive-words.txt", "UTF-8").split("\n");
-
     var tokens = phrase.toLowerCase().split(" "),
-        hits = _.intersection(this.pos, tokens);
-    
+        hits   = 0,
+        words  = [];
+
+    tokens.forEach(function(t) {
+        if (pos.indexOf(t) > -1) hits++;
+        words.push(t)
+    });
+
     return { 
-        score : hits.length / tokens.length,      
-        words : hits
+        score : hits,
+        words : words
     };
 
 };
@@ -48,18 +66,9 @@ function analyze (phrase) {
         neg = negativity(phrase);
 
     return {
-
-        score     : pos.score - neg.score,
-
-        positive  : {
-            score : pos.score,
-            words : pos.words
-        },
-
-        negative  : {
-            score : neg.score,
-            words : neg.words
-        }
+        score    : pos.score - neg.score,
+        positive : pos,
+        negative : neg
     };
 }
 
