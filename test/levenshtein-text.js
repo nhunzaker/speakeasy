@@ -1,4 +1,4 @@
-var tagger = require("../../index"),
+var tagger = require("../index").classify,
     vows = require('vows'),
     assert = require('assert');
 

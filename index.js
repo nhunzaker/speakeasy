@@ -12,6 +12,7 @@
 // -------------------------------------------------- //
 
 module.exports = {
-    sentiment : require("./sentiment"),
-    classify   : require("./tagging")
+    sentiment : require("./lib/sentiment"),
+    classify  : require("./lib/classify"),
+    closest   : require("./lib/levenshtein")
 };

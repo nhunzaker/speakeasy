@@ -1,6 +1,6 @@
-var tagger = require("../index").classify,
-    vows = require('vows'),
-    assert = require('assert');
+var closest = require("../index").closest,
+    vows    = require('vows'),
+    assert  = require('assert');
 
 
 // -------------------------------------------------- //
@@ -8,18 +8,14 @@ var tagger = require("../index").classify,
 
 vows.describe("Classifier Functions").addBatch({
 
-    'When asked, "What time is it?"': {
+    'It should calculate the best fit for a word within a group' : {
         
-        topic: tagger.classify("What time is it?"),
+        topic: closest("valid", ["who", "what", "when", "validate"]),
 
-        "it should correctly determine the owner": function(topic) {
-            assert.equal(topic.owner, "it");
-        },
-
-        'it should correctly determine the subject': function (topic) {
-            assert.equal(topic.subject, "time");
+        "the best fit should be 'validate'": function(closest) {
+            assert.equal(closest, "validate");
         }
-        
+
     }
 
 }).export(module);
