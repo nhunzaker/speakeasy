@@ -35,7 +35,6 @@ sentiment.analyze("I love you, but you smell something aweful")
 
 // Closest word
 // ------------------------------------- //
-
 speak.closest("foo", ["foo", "bar", "baz"])     //=> "foo"
 
 ```
