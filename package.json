@@ -6,7 +6,7 @@
   "author"        : "Nate Hunzaker <nate.hunzaker@gmail.com>",
   "repository"    : {"type": "git", "url": "git://github.com/natehunzaker/speakeasy.git"},
   "main"          : "index.js",
-  "version"       : "0.1.42",
+  "version"       : "0.2.0",
 
   "dependencies"  : {
     "levenshtein" : "*"
