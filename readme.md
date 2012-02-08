@@ -10,6 +10,7 @@
 
 1. `*.classify` : Roughly determines the action, subject, and owner (posessive object) of a sentence
 2. `*.sentiment`: A collection of methods to approximate the positive/negative affect of a statement (relative to the whole statement)
+3. `*.closest`  : Uses levenshtein distance to find the best match for a word given an array
 
 ---
 
@@ -30,6 +31,10 @@ speak.sentiment.positivity("I love you")         //=> { score: 1, words: [love] 
 sentiment.analyze("I love you, but you smell something aweful")  
 // (Negative scores dictate a stronger influence of negative words)
 //=> { score: -1, positive: { ... }, negative: { ... } }
+
+// Closest word
+// ------------------------------------- //
+speak.closest("node", ["foo", "nodejs", "baz"])     //=> "nodejs"
 
 ```
 
