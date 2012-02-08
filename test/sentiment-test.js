@@ -16,8 +16,12 @@ vows.describe("Sentiment").addBatch({
             assert.equal(neg.words.length, 1);
         },
         
-        "the negativity should be 1": function(neg) {
+        "the negativity score should be 1": function(neg) {
             assert.equal(neg.score, 1);
+        },
+        
+        "the negativity comparative should be 0.25": function(neg) {
+            assert.equal(neg.comparative, 0.25);
         }
 
     },
@@ -30,8 +34,12 @@ vows.describe("Sentiment").addBatch({
             assert.equal(pos.words.length, 1);
         },
         
-        "the negativity should be 1": function(pos) {
+        "the positive score should be 1": function(pos) {
             assert.equal(1, 1);
+        },
+
+        "the positive comparative should be 0.33": function(neg) {
+            assert.equal(~~(neg.comparative * 100), 33);
         }
 
     },
@@ -58,6 +66,10 @@ vows.describe("Sentiment").addBatch({
 
         "the score should be -1": function(sent) {
             assert.equal(sent.score, -1);
+        },
+
+        "the comparative should be 1/8": function(sent) {
+            assert.equal(sent.comparative, (-1 / 8));
         }
 
     }
