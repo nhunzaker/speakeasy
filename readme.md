@@ -28,7 +28,7 @@ speak.classify("Do you know what time it is?")   //=> { action: "what", owner: "
 speak.sentiment.negativity("I hate your guts")   //=> { score: 1, words: [hate] }
 speak.sentiment.positivity("I love you")         //=> { score: 1, words: [love] }
 
-sentiment.analyze("I love you, but you smell something aweful")  
+speak.sentiment.analyze("I love you, but you smell something aweful")  
 // (Negative scores dictate a stronger influence of negative words)
 //=> { score: -1, positive: { ... }, negative: { ... } }
 
