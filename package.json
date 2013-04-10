@@ -1,10 +1,10 @@
 {
   "name"          : "speakeasy-nlp",
   "description"   : "A simple natural language processor for node javascript.",
-  "homepage"      : "www.github.com/natehunzaker/speakeasy",
+  "homepage"      : "www.github.com/nhunzaker/speakeasy",
   "keywords"      : ["natural language"],
   "author"        : "Nate Hunzaker <nate.hunzaker@gmail.com>",
-  "repository"    : {"type": "git", "url": "git://github.com/natehunzaker/speakeasy.git"},
+  "repository"    : {"type": "git", "url": "git://github.com/nhunzaker/speakeasy.git"},
   "main"          : "index.js",
   "version"       : "0.2.11",
 
