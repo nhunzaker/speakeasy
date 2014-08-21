@@ -48,3 +48,8 @@ of intelligence.
 
 SpeakEasy's goal is to provide a library for NodeJS to perform simple language processing actions that perform well for 
 70%-80% of all cases.
+
+
+## License
+
+`speakeasy` is released under the [MIT License](http://opensource.org/licenses/MIT).
