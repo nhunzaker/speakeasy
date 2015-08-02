@@ -17,7 +17,6 @@
   "main": "index.js",
   "version": "0.2.11",
   "dependencies": {
-    "levenshtein": "*",
-    "pos": "^0.2.3"
+    "levenshtein": "*"
   }
 }
