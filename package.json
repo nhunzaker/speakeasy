@@ -18,5 +18,8 @@
   "version": "0.2.11",
   "dependencies": {
     "levenshtein": "*"
+  },
+  "devDependencies": {
+    "vows": "~0.8"
   }
 }
