@@ -1,4 +1,6 @@
-# SpeakEasy, Simple Natural Language Processing
+# SpeakEasy
+
+Simple Natural Language Processing
 
 [![Circle CI](https://circleci.com/gh/nhunzaker/speakeasy.svg?style=svg)](https://circleci.com/gh/nhunzaker/speakeasy)
 
