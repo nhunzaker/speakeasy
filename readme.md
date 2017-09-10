@@ -9,7 +9,7 @@ Simple Natural Language Processing
 
 ---
 
-###Current commands:
+### Current commands:
 
 1. `*.classify` : Roughly determines the action, subject, and owner (posessive object) of a sentence. As of 0.2.2 it also includes verbs, nouns, and adjectives
 2. `*.sentiment`: A collection of methods to approximate the positive/negative affect of a statement (relative to the whole statement)
