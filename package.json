@@ -6,6 +6,7 @@
     "natural language"
   ],
   "scripts": {
+    "format": "prettier --write lib/**/**/**.{js,md}",
     "test": "vows"
   },
   "license": "MIT",
@@ -20,6 +21,10 @@
     "levenshtein": "*"
   },
   "devDependencies": {
+    "prettier": "^1.13.5",
     "vows": "~0.8"
+  },
+  "prettier": {
+    "semi": false
   }
 }
