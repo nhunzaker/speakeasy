@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.2.13
+
+- Fix bug in pos library related to `for..in` being used instead of
+  forEach.
+
 ## 0.2.12
 
 - Remove unused third argument in classifier
