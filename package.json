@@ -16,7 +16,7 @@
     "url": "git://github.com/nhunzaker/speakeasy.git"
   },
   "main": "index.js",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "dependencies": {
     "levenshtein": "*"
   },
